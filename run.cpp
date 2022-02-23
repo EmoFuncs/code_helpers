@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 
         command_line_tool cmd;
 
-        cmd.execute("g++", "--std=c++17", "-o", problem_id, problem_id+".cpp");
+        cmd.execute("g++-10", "--std=c++20", "-O2", "-o", problem_id, problem_id+".cpp");
         
         string line = "./" + problem_id;
         if (input_file != "") line += " < " + input_file;
